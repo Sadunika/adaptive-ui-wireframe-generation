@@ -1,0 +1,18 @@
+.content {
+  padding: 20px;
+}
+
+.instruction-note {
+  float: left;
+  color: orange;
+  margin-top: 3px;
+}
+
+.card {
+  border: 1px solid black !important;
+}
+
+.inAQjx {
+  color: red;
+}
+

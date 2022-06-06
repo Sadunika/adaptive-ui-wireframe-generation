@@ -1,0 +1,7 @@
+.button-icon-margin{
+  margin-right: 10px;
+}
+
+.btn:focus {
+  box-shadow: none !important;
+}

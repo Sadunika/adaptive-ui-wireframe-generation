@@ -1,0 +1,24 @@
+.stage {
+  margin: 10px auto;
+  border: 10px solid black;
+  border-radius: 16px;
+  width: 1000px;
+  height: 470px;
+}
+
+.center-block{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-wrapper {
+  text-align: center;
+}
+
+.drag-instruction{
+  color: red;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 30px;
+}
