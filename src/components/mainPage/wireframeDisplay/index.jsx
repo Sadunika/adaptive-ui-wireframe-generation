@@ -69,7 +69,7 @@ const WireframeDisplay = ({ elements }) => {
               <div className="alert-description">
                 <Alert key="info" variant="info">
                   You can drag the elements within the canavs area and redesign
-                  the wireframe as your wish.
+                  the UI wireframe as your preference.
                 </Alert>
               </div>
             ) : null}
@@ -87,8 +87,9 @@ const WireframeDisplay = ({ elements }) => {
                 </p>
                 <Button
                   style={{
-                    backgroundColor: "#1E90FF",
-                    borderColor: "#1E90FF",
+                    backgroundColor: "#fff",
+                    borderColor: "#FF8C00",
+                    color: "#FF8C00",
                     marginRight: "10px",
                   }}
                   onClick={() => exportComponentAsJPEG(ref)}
@@ -98,8 +99,10 @@ const WireframeDisplay = ({ elements }) => {
                 </Button>
                 <Button
                   style={{
-                    backgroundColor: "#1E90FF",
-                    borderColor: "#1E90FF",
+                    backgroundColor: "#fff",
+                    borderColor: "#FF8C00",
+                    color: "#FF8C00",
+                    marginRight: "10px",
                   }}
                   onClick={() => exportComponentAsPNG(ref)}
                 >
@@ -108,11 +111,15 @@ const WireframeDisplay = ({ elements }) => {
                 </Button>
               </div>
               <div className="section-wrapper">
-                <p className="instruction-for-buttons">Add Review.</p>
+                <p className="instruction-for-buttons">
+                  Add a review and a rating to the generated UI wireframe.
+                </p>
                 <Button
                   style={{
-                    backgroundColor: "#1E90FF",
-                    borderColor: "#1E90FF",
+                    backgroundColor: "#fff",
+                    borderColor: "#FF8C00",
+                    color: "#FF8C00",
+                    marginRight: "10px",
                   }}
                   onClick={() => displayReviewAddModal()}
                 >
@@ -124,8 +131,10 @@ const WireframeDisplay = ({ elements }) => {
                 <p className="instruction-for-buttons">Reset the canvas.</p>
                 <Button
                   style={{
-                    backgroundColor: "#228B22",
-                    borderColor: "#228B22",
+                    backgroundColor: "#fff",
+                    borderColor: "#FF8C00",
+                    color: "#FF8C00",
+                    marginRight: "10px",
                   }}
                   onClick={() => refreshPage()}
                 >

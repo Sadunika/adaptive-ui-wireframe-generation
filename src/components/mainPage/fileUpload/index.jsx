@@ -51,7 +51,7 @@ const FileUpload = ({ getElements }) => {
               <Col md={8}>
                 <div>
                   <div className="instruction-note">
-                    Upload file to generate UI wireframe :
+                    Upload a file to generate UI wireframe :
                   </div>
                   <input ref={ref} onChange={onFileChange} type="file" />
                 </div>
@@ -60,8 +60,8 @@ const FileUpload = ({ getElements }) => {
                 <Button
                   variant="success"
                   style={{
-                    backgroundColor: "#EC7A23",
-                    borderColor: "#EC7A23",
+                    backgroundColor: "#FF8C00",
+                    borderColor: "#FF8C00",
                   }}
                   onClick={() => generate(input)}
                 >
