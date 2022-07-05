@@ -6,7 +6,7 @@
   height: 470px;
 }
 
-.center-block{
+.center-block {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,9 +16,18 @@
   text-align: center;
 }
 
-.drag-instruction{
+.drag-instruction {
   color: red;
   font-weight: bold;
   text-align: left;
   margin-bottom: 30px;
+}
+
+.review-add-modal h3 {
+  font-size: 18px;
+  color: #ec7a23;
+}
+
+.review-add-modal .stars {
+  margin-bottom: 16px;
 }
