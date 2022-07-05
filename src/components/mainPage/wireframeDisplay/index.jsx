@@ -74,7 +74,7 @@ const WireframeDisplay = ({ elements }) => {
               </div>
             ) : null}
             <div ref={ref} className="wrapper">
-              <Stage width={900} height={450} className="stage">
+              <Stage width={960} height={450} className="stage">
                 {elements && <UIElementGenerator element={elements} />}
               </Stage>
             </div>
