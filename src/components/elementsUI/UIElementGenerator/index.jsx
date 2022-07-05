@@ -13,7 +13,7 @@ export function UIElementGenerator({ element }) {
   const [dropdownArray, serDropdownArray] = useState([]);
   const [checkboxesArray, setCheckboxesArray] = useState([]);
   const [datePickerArray, setDatePickerArray] = useState([]);
-  const xposition = 280;
+  const xposition = 180;
   const yposition = 30;
 
   useEffect(() => {

@@ -65,8 +65,8 @@ const WireframeDisplay = ({ elements }) => {
       <div className={"canvas"}>
         <Row>
           <Col md={8}>
-            <div ref={ref}>
-              <Stage width={1000} height={450} className="stage">
+            <div ref={ref} className="wrapper">
+              <Stage width={900} height={450} className="stage">
                 {elements && <UIElementGenerator element={elements} />}
               </Stage>
             </div>
