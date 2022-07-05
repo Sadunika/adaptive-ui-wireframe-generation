@@ -1,8 +1,12 @@
-.button-icon-margin{
+.button-icon-margin {
   margin-right: 10px;
   margin-bottom: 4px;
 }
 
 .btn:focus {
   box-shadow: none !important;
+}
+
+.alert {
+  margin-bottom: 0 !important;
 }

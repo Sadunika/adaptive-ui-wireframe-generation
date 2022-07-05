@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Col, Row, Button, Modal } from "react-bootstrap";
+import { Col, Row, Button, Modal, Alert } from "react-bootstrap";
 import { Stage } from "react-konva";
 import { UIElementGenerator } from "../../elementsUI/UIElementGenerator";
 import ReactStars from "react-rating-stars-component";
@@ -65,6 +65,14 @@ const WireframeDisplay = ({ elements }) => {
       <div className={"canvas"}>
         <Row>
           <Col md={8}>
+            {elements && elements.length > 0 ? (
+              <div className="alert-description">
+                <Alert key="info" variant="info">
+                  You can drag the elements within the canavs area and redesign
+                  the wireframe as your wish.
+                </Alert>
+              </div>
+            ) : null}
             <div ref={ref} className="wrapper">
               <Stage width={900} height={450} className="stage">
                 {elements && <UIElementGenerator element={elements} />}
@@ -73,15 +81,7 @@ const WireframeDisplay = ({ elements }) => {
           </Col>
           <Col md={4} className="center-block">
             <div className="button-wrapper">
-              {elements && elements.length > 0 ? (
-                <div>
-                  <p className="drag-instruction">
-                    You can drag the elements within the canavs area and
-                    redesign the wireframe as your wish.
-                  </p>
-                </div>
-              ) : null}
-              <div>
+              <div className="section-wrapper">
                 <p className="instruction-for-buttons">
                   Download the generated UI wireframe as PNG or JPEG.
                 </p>
@@ -89,19 +89,17 @@ const WireframeDisplay = ({ elements }) => {
                   style={{
                     backgroundColor: "#1E90FF",
                     borderColor: "#1E90FF",
-                    marginBottom: "20px",
+                    marginRight: "10px",
                   }}
                   onClick={() => exportComponentAsJPEG(ref)}
                 >
                   <FaFileDownload className="button-icon-margin" />
                   Download JPEG
                 </Button>
-                <br />
                 <Button
                   style={{
                     backgroundColor: "#1E90FF",
                     borderColor: "#1E90FF",
-                    marginBottom: "20px",
                   }}
                   onClick={() => exportComponentAsPNG(ref)}
                 >
@@ -109,21 +107,7 @@ const WireframeDisplay = ({ elements }) => {
                   Download PNG
                 </Button>
               </div>
-              <div>
-                <p className="instruction-for-buttons">Reset the canvas.</p>
-                <Button
-                  style={{
-                    backgroundColor: "#228B22",
-                    borderColor: "#228B22",
-                    marginBottom: "20px",
-                  }}
-                  onClick={() => refreshPage()}
-                >
-                  <FaRedo className="button-icon-margin" />
-                  Reset
-                </Button>
-              </div>
-              <div>
+              <div className="section-wrapper">
                 <p className="instruction-for-buttons">Add Review.</p>
                 <Button
                   style={{
@@ -134,6 +118,19 @@ const WireframeDisplay = ({ elements }) => {
                 >
                   <FaStar className="button-icon-margin" />
                   Review
+                </Button>
+              </div>
+              <div className="section-wrapper">
+                <p className="instruction-for-buttons">Reset the canvas.</p>
+                <Button
+                  style={{
+                    backgroundColor: "#228B22",
+                    borderColor: "#228B22",
+                  }}
+                  onClick={() => refreshPage()}
+                >
+                  <FaRedo className="button-icon-margin" />
+                  Reset
                 </Button>
               </div>
             </div>

@@ -16,13 +16,6 @@
   text-align: center;
 }
 
-.drag-instruction {
-  color: red;
-  font-weight: bold;
-  text-align: left;
-  margin-bottom: 30px;
-}
-
 .review-add-modal h3 {
   font-size: 18px;
   color: #ec7a23;
@@ -32,6 +25,18 @@
   margin-bottom: 16px;
 }
 
-.wrapper{
+.wrapper {
   padding: 10px;
 }
+
+.section-wrapper {
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.alert-description {
+  margin-left: 40px;
+}
+
