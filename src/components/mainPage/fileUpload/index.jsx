@@ -20,7 +20,12 @@ const FileUpload = ({ getElements }) => {
       manageErrorMessages("Please upload a file.");
     } else {
       setShowToast(false);
-      const { response } = await fetchElements(input);
+      const { response, error } = await fetchElements(input);
+      console.log(error, "error");
+      if (error) {
+        manageErrorMessages(error);
+        return;
+      }
       if (response && response.length === 0) {
         manageErrorMessages("Could not find any UI elements.");
       } else {

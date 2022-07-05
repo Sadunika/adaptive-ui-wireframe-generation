@@ -8,7 +8,10 @@ export const fetchElements = async (input) => {
 
   try {
     const response = await axios.post(baseURL, data);
-    return { response: response.data.data };
+    return {
+      response: response.data.data.elements,
+      error: response.data.data.error,
+    };
   } catch (error) {
     console.log(error, "error");
   }

@@ -25,17 +25,17 @@ export function UIElementGenerator({ element }) {
     const datePickerList = [];
 
     element.forEach((el) => {
-      if (el.element === "button") {
+      if (el.element === "UI_BUTTON") {
         buttonList.push(el);
-      } else if (el.element === "text field") {
+      } else if (el.element === "UI_TEXT_FIELD") {
         textFieldsList.push(el);
-      } else if (el.element === "radio") {
+      } else if (el.element === "UI_RADIO") {
         radioButtonsList.push(el);
-      } else if (el.element === "checkbox") {
+      } else if (el.element === "UI_CHECKBOX") {
         checkboxesList.push(el);
-      } else if (el.element === "dropdown") {
+      } else if (el.element === "UI_DROPDOWN") {
         dropdownList.push(el);
-      } else if (el.element === "date") {
+      } else if (el.element === "UI_DATE") {
         datePickerList.push(el);
       } else {
         console.log("error");
