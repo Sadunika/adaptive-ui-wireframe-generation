@@ -15,6 +15,8 @@ export function UIElementGenerator({ element }) {
   const [datePickerArray, setDatePickerArray] = useState([]);
   const xposition = 250;
   const yposition = 30;
+  const element_squre_height = 40;
+  const element_circle_height = 30;
 
   useEffect(() => {
     const buttonList = [];
@@ -54,7 +56,7 @@ export function UIElementGenerator({ element }) {
       {textElementArray.map((element, index) => (
         <TextFieldUI
           element={element}
-          yposition={yposition + index * 40}
+          yposition={yposition + index * element_squre_height}
           xposition={xposition}
           placeholder={element.label}
         />
@@ -62,7 +64,7 @@ export function UIElementGenerator({ element }) {
       {radioButtonsArray.map((element, index) => (
         <RadioButtonsUI
           element={element}
-          yposition={yposition + textElementArray.length * 40 + index * 30}
+          yposition={yposition + textElementArray.length * element_squre_height + index * element_circle_height}
           xposition={xposition}
         />
       ))}
@@ -71,9 +73,9 @@ export function UIElementGenerator({ element }) {
           element={element}
           yposition={
             yposition +
-            textElementArray.length * 40 +
-            radioButtonsArray.length * 30 +
-            index * 40
+            textElementArray.length * element_squre_height +
+            radioButtonsArray.length * element_circle_height +
+            index * element_squre_height
           }
           xposition={xposition}
         />
@@ -84,10 +86,10 @@ export function UIElementGenerator({ element }) {
           xposition={xposition}
           yposition={
             yposition +
-            textElementArray.length * 40 +
-            radioButtonsArray.length * 30 +
-            dropdownArray.length * 40 +
-            index * 40
+            textElementArray.length * element_squre_height +
+            radioButtonsArray.length * element_circle_height +
+            dropdownArray.length * element_squre_height +
+            index * element_squre_height
           }
         />
       ))}
@@ -96,11 +98,11 @@ export function UIElementGenerator({ element }) {
           element={element}
           yposition={
             yposition +
-            textElementArray.length * 40 +
-            radioButtonsArray.length * 30 +
-            dropdownArray.length * 40 +
-            checkboxesArray.length * 40 +
-            index * 40
+            textElementArray.length * element_squre_height +
+            radioButtonsArray.length * element_circle_height +
+            dropdownArray.length * element_squre_height +
+            checkboxesArray.length * element_squre_height +
+            index * element_squre_height
           }
           xposition={xposition}
         />
@@ -110,11 +112,11 @@ export function UIElementGenerator({ element }) {
           element={element}
           yposition={
             yposition +
-            textElementArray.length * 40 +
-            radioButtonsArray.length * 30 +
-            dropdownArray.length * 40 +
-            checkboxesArray.length * 40 +
-            datePickerArray.length * 40
+            textElementArray.length * element_squre_height +
+            radioButtonsArray.length * element_circle_height +
+            dropdownArray.length * element_squre_height +
+            checkboxesArray.length * element_squre_height +
+            datePickerArray.length * element_squre_height
           }
           xposition={index === 0 ? xposition : xposition + (index + 1) * 100}
           placeholder={element.label}

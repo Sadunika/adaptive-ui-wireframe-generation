@@ -17,12 +17,10 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.firestore().settings({ experimentalForceLongPolling: true });
 
-var uniqid = require("uniqid");
-
 export const fetchElements = async (input) => {
   const data = new FormData();
   data.append("file", input);
-  data.append("filename", "file1");
+  data.append("filename", input.name);
 
   try {
     const response = await axios.post(baseURL, data);
@@ -31,11 +29,12 @@ export const fetchElements = async (input) => {
       error: response.data.data.error,
     };
   } catch (error) {
-    console.log(error, "error");
+    console.log(error);
   }
 };
 
 export const saveReview = async (payload) => {
+  var uniqid = require("uniqid");
   var db = firebase.firestore();
   db.collection("user-reviews")
     .doc(uniqid())

@@ -12,12 +12,20 @@ const FileUpload = ({ getElements }) => {
   const [showToast, setShowToast] = useState(false);
   const ref = React.useRef();
   function onFileChange(event) {
-    setInput(event.target.files[0]);
+    const docxType =
+      "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+    var file = event.target.files[0];
+    if (file.type === docxType) {
+      setInput(file);
+    } else {
+      ref.current.value = "";
+      manageErrorMessages("Only word documents can be uploaded.");
+    }
   }
 
   const generate = async (input) => {
     if (!input) {
-      manageErrorMessages("Please upload a file.");
+      manageErrorMessages("Please upload a document.");
     } else {
       setShowToast(false);
       const { response, error } = await fetchElements(input);
@@ -27,7 +35,7 @@ const FileUpload = ({ getElements }) => {
         return;
       }
       if (response && response.length === 0) {
-        manageErrorMessages("Could not find any UI elements.");
+        manageErrorMessages("Could not find any supported UI elements in the field specification.");
       } else {
         getElements(response);
       }
